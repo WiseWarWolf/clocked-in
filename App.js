@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+export default class App extends Component {
+
+  _onPressButton() {
+    Alert.alert('Time and Date down');
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.header}>Clocked In</Text>
+        <Button onPress={this._onPressButton} title="Press Me" color={"black"}/>
+      </View>
+    );
+  };
+};
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 50,
+  },
+  header: {
+    fontWeight: 'bold',
+    fontSize: 50,
+    color: 'black',
+    textAlign: 'center',
   },
 });
+

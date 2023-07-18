@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "79867d8b-cddf-4239-ab0e-d2e6fc087d1f"
+      }
+    },
+    "owner": "wisewarwolf"
   }
 }
