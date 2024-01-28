@@ -11,7 +11,9 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.header}>Clocked In</Text>
-        <Button onPress={this._onPressButton} title="Press Me" color={"black"}/>
+        <View style={styles.b1}>
+          <Button onPress={this._onPressButton} title="Press to Log Time" color={"white"}/>
+        </View> 
       </View>
     );
   };
@@ -20,6 +22,12 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     marginTop: 50,
+  },
+  b1: {
+    height: 'auto',
+    borderWidth: 'auto',
+    backgroundColor: 'black',
+    marginTop: 350,
   },
   header: {
     fontWeight: 'bold',
